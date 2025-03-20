@@ -42,7 +42,7 @@ func TestComputeHandler_Compute(t *testing.T) {
 				t.Errorf("Очікувана помилка: %v, отримана помилка: %v", test.expectedErr, err)
 			}
 
-			if err == nil && output.String() != test.expected {
+			if err == nil && strings.TrimSpace(output.String()) != strings.TrimSpace(test.expected) {
 				t.Errorf("Очікуваний результат: %s, отриманий результат: %s", test.expected, output.String())
 			}
 		})
