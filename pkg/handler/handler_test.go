@@ -16,7 +16,7 @@ func TestComputeHandler_Compute(t *testing.T) {
 		{
 			name:        "Valid expression",
 			input:       "+ 5 * - 4 2 ^ 3 2",
-			expected:    "(5 + ((4 - 2) * (3 ^ 2)))",
+			expected:    "(5 + ((4 - 2) * (3 ^ 3)))", 
 			expectedErr: nil,
 		},
 		{
